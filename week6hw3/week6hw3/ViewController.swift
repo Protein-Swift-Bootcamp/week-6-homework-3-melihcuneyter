@@ -10,6 +10,7 @@ import UIKit
 class ViewController: UIViewController {
     
     @IBOutlet weak var collectionView: UICollectionView!
+    private var layout = PinterestLayout()
     
     var parser = XMLParser()
     var arrDetail: [String] = []
@@ -26,7 +27,25 @@ class ViewController: UIViewController {
         parser.delegate = self
         parser.parse()
         
+        configureCollectionView()
+    }
+    
+    private func configureCollectionView() {
+        collectionView.topAnchor.constraint(equalTo: view.topAnchor).isActive = true
+        collectionView.bottomAnchor.constraint(equalTo: view.bottomAnchor).isActive = true
+        collectionView.leadingAnchor.constraint(equalTo: view.leadingAnchor).isActive = true
+        collectionView.trailingAnchor.constraint(equalTo: view.trailingAnchor).isActive = true
+        collectionView.collectionViewLayout = layout
+        collectionView.translatesAutoresizingMaskIntoConstraints = false
         collectionView.register(ContentCVC.nib(), forCellWithReuseIdentifier: "ContentCVC")
+        
+        layout.columnsCount = 2
+        layout.delegate = self
+        layout.contentPadding = PinterestLayout.Padding(horizontal: 5, vertical: 5)
+        layout.cellsPadding = PinterestLayout.Padding(horizontal: 10, vertical: 10)
+        
+        collectionView.setContentOffset(CGPoint.zero, animated: false)
+        collectionView.reloadData()
     }
 }
 
@@ -53,10 +72,6 @@ extension ViewController: XMLParserDelegate {
     func parser(_ parser: XMLParser, foundCharacters string: String) {
         content = string
     }
-    
-    func parserDidEndDocument(_ parser: XMLParser) {
-        print(arrFinal)
-    }
 }
 
 // MARK: - CollectionView Delegate
@@ -79,6 +94,16 @@ extension ViewController: UICollectionViewDataSource {
         let imageURL = tempArr[1]
         cell.configure(with: imageURL, content: content)
         return cell
+    }
+}
+
+extension ViewController: PinterestLayoutDelegate {
+    func cellSize(indexPath: IndexPath) -> CGSize {
+//        guard let width = image.thumbnail?.width, let height = image.thumbnail?.height else { return .zero }
+//        let cellWidth = layout.width
+//        let size = CGSize(width: Int(cellWidth), height: Int((height/width) * cellWidth))
+//        return size
+        return CGSize(width: 200, height: 200)
     }
 }
 

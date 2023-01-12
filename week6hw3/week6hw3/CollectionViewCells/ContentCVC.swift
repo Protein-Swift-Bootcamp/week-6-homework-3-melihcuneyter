@@ -15,9 +15,11 @@ class ContentCVC: UICollectionViewCell {
     
     override func awakeFromNib() {
         super.awakeFromNib()
+        self.contentView.layer.cornerRadius = 15
     }
     
     public func configure(with imageURL: String, content: String) {
+        imageView.kf.indicatorType = .activity
         imageView.kf.setImage(with: URL.init(string: imageURL))
         contentLabel.text = content
     }

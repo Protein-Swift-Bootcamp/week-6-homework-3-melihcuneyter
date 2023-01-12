@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		0999CE61DDBE7CB638FB7CFE /* Pods_week6hw3.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1B379832521C027540CB8E12 /* Pods_week6hw3.framework */; };
+		E509E9B329705E1E00CCCFBA /* PinterestLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = E509E9B229705E1E00CCCFBA /* PinterestLayout.swift */; };
 		E515C9C2296D7E06008AF8F6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E515C9C1296D7E06008AF8F6 /* AppDelegate.swift */; };
 		E515C9C6296D7E06008AF8F6 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E515C9C5296D7E06008AF8F6 /* ViewController.swift */; };
 		E515C9C9296D7E06008AF8F6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E515C9C7296D7E06008AF8F6 /* Main.storyboard */; };
@@ -21,6 +22,7 @@
 		1B379832521C027540CB8E12 /* Pods_week6hw3.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_week6hw3.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		3F185F42FF29792427B989A9 /* Pods-week6hw3.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-week6hw3.debug.xcconfig"; path = "Target Support Files/Pods-week6hw3/Pods-week6hw3.debug.xcconfig"; sourceTree = "<group>"; };
 		738E64CB103356A9983C3082 /* Pods-week6hw3.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-week6hw3.release.xcconfig"; path = "Target Support Files/Pods-week6hw3/Pods-week6hw3.release.xcconfig"; sourceTree = "<group>"; };
+		E509E9B229705E1E00CCCFBA /* PinterestLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PinterestLayout.swift; sourceTree = "<group>"; };
 		E515C9BE296D7E06008AF8F6 /* week6hw3.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = week6hw3.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E515C9C1296D7E06008AF8F6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E515C9C5296D7E06008AF8F6 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -89,6 +91,7 @@
 				E515C9CA296D7E08008AF8F6 /* Assets.xcassets */,
 				E515C9CC296D7E08008AF8F6 /* LaunchScreen.storyboard */,
 				E515C9CF296D7E08008AF8F6 /* Info.plist */,
+				E509E9B229705E1E00CCCFBA /* PinterestLayout.swift */,
 			);
 			path = week6hw3;
 			sourceTree = "<group>";
@@ -218,6 +221,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E509E9B329705E1E00CCCFBA /* PinterestLayout.swift in Sources */,
 				E515C9C6296D7E06008AF8F6 /* ViewController.swift in Sources */,
 				E5D37EEE296F00F300B938C5 /* ContentCVC.swift in Sources */,
 				E515C9C2296D7E06008AF8F6 /* AppDelegate.swift in Sources */,
